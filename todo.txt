@@ -1,0 +1,7 @@
+SQL:
+- PPH(PoorPeopleHibernate)table to object
+- LazyTable: autocreate table using a ResultSet
+
+AsyncQuery:
+- finish class
+- add unit test with h2-database?
