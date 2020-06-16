@@ -1,2 +1,2 @@
 # Kodiak
-General purpose library
+Multi purpose library
