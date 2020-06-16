@@ -64,7 +64,6 @@ public class AsyncQuery {
         try {
             if (completableFuture != null) {
                 completableFuture.complete(null);
-                sqlStatement.cancel();
                 sqlStatement.close();
             }
             connection.close();
@@ -82,7 +81,6 @@ public class AsyncQuery {
         if (completableFuture != null) {
             completableFuture.complete(null);
             try {
-                sqlStatement.cancel();
                 sqlStatement.close();
             } catch (SQLException e) {
                 //e.printStackTrace();
