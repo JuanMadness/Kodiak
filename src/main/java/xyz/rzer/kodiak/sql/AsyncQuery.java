@@ -1,4 +1,4 @@
-package main.java.xyz.rzer.kodiak.sql;
+package xyz.rzer.kodiak.sql;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
