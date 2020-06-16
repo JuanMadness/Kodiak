@@ -28,11 +28,14 @@ public class AsyncQueryTest {
             String tResultString = tResultSet.getString(1);
             Assert.assertEquals("AsyncQuery ResultSet", "test1", tResultString);
 
+            Assert.assertFalse(tConnection.isClosed());
+
             tAsyncQuery.stop();
+
+            Assert.assertFalse(tConnection.isClosed());
+
             tAsyncQuery.close();
 
-
-            //System.out.println(tConnection.isClosed());
             Assert.assertTrue(tConnection.isClosed());
 
         } catch (Exception e) {

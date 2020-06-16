@@ -9,10 +9,10 @@ import java.util.concurrent.ExecutionException;
 
 public class AsyncQuery {
 
-    private Connection connection;
-    private String select;
-    private Statement sqlStatement;
-    private CompletableFuture<ResultSet> completableFuture;
+    private final Connection connection;
+    private final String select;
+    private volatile Statement sqlStatement;
+    private  volatile CompletableFuture<ResultSet> completableFuture;
 
 
 
